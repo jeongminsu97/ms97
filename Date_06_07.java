@@ -11,7 +11,7 @@ public class Date_06_07 {
 		// star();    // 4번
 		//cal_grade(); // 5번
 		//sum_avg();    // 6번
-		
+		subject_sum_avg();
 		//change_case();  // 8번
 	}
 	
@@ -98,6 +98,26 @@ public class Date_06_07 {
 		
 		for(String str : arr_score){
 			System.out.println(str);
+		}
+	}
+
+	static void subject_sum_avg() {
+		int student [][] = new int [][]{ // 점수데이터 선언
+			{90, 80, 80},
+			{85, 85, 95},
+			{95, 70, 75},
+			{80, 80, 90},
+			{90, 75, 80}
+		};
+		
+		for(int i =0; i<student.length;i++){ // 학생수만큼 반복
+			int sum =0;
+			double avg =0;
+			for(int j =0; j<student[i].length;j++){ // 과목수만큼 반복
+				sum+= student[i][j];
+			}
+			avg = sum / student[i].length; // 학생의 과목수만큼
+			System.out.printf("학생%d : 합계: %d, 평균: %f \n", i,sum, avg);
 		}
 
 	}
