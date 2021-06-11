@@ -14,7 +14,7 @@ public class Date_06_07 {
 		System.out.println("ddd");
 	}
 	
-	static int sum() { // 1���� 100���� ���ϱ�, ���� 2
+	static int sum() { //1부터 100까지의 합계
 		
 		int total=0;
 		for (int i =1; i<100; i++)
@@ -25,15 +25,14 @@ public class Date_06_07 {
 		return total;
 	}
 	
-	static void gugudan() { // ������ 2�ܺ��� ����ϱ�, ���� 3
-		
+	static void gugudan() { // 구구단
 		for(int i =1; i<10;i++)
 		{	
 			if (i ==1)
 			{
 				continue;
 			}
-			System.out.println("** " + i + "��"+ " **");
+			System.out.println("** " + i + "단"+ " **");
 			for(int j =1; j<10;j++)
 			{
 				System.out.println(i + " * " + j +" = " + i*j );
@@ -44,10 +43,10 @@ public class Date_06_07 {
 		}
 	}
 	
-	static void star() { // ���ι޾Ƽ� ����� , ���� 4
+	static void star() { // 별찍기
 		                
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("������ ����Ʈ�� ���� ũ�⸦ �Է��ϼ���: ");
+		System.out.print("원하는 라인의 수를 입력: ");
 		int line = scanner.nextInt();
 		
 		for(int i=0; i<line;i++)
@@ -66,10 +65,10 @@ public class Date_06_07 {
 		}
 	}
 	
-	static void cal_grade() { // ���� �Է¹ް� ���� ���, ���� 5
+	static void cal_grade() { // 학점 계산기?
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("���� �Է�: ");
+		System.out.print("점수를 입력: ");
 		int score = scanner.nextInt();
 		char grade;
 		
@@ -88,10 +87,10 @@ public class Date_06_07 {
 		
 	}
 	
-	static void sum_avg() { // ���б� 10�� �л��� ���� ���, ���
+	static void sum_avg() { // 평균, 합계 구하기
 	
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("���� �Է�: ");
+		System.out.print("점수: ");
 		String input = scanner.nextLine();
 		
 		String [] arr_score = input.split(",");
