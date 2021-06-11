@@ -1,11 +1,13 @@
 package practice;
 
+import java.lang.invoke.TypeDescriptor;
 import java.util.Scanner;
 
 public class Date_06_07 {
 
 	public static void main(String[] args) {
-		
+
+		// trans_fahrenheit(); // 1번
 		// sum();     // 2번
 		// gugudan(); // 3번
 		// star();    // 4번
@@ -18,8 +20,24 @@ public class Date_06_07 {
 		test.encrypt("Hello world"); // 암호화
 		test.decrypt("Khoor Zruog"); // 복호화
 		*/
+		/* // 10번
+		System.out.print("첫번째 숫자를 입력하세요: ");
+		int n1 = scanner.nextInt();
+		System.out.print("두번째 숫자를 입력하세요: ");
+		int n2 = scanner.nextInt();
+		ArithmeticOperation test = new ArithmeticOperation();
+		test.add(n1, n2);
+		test.subtract(n1, n2);
+		test.multiply(n1, n2);
+		test.divide(n1, n2);
+		*/
 	}
-	
+	static void trans_fahrenheit() {
+		double Celsius = 31.5;
+		double Fahreheit = (Celsius * (9/5) + 32);
+		System.out.println("섭씨: " + Celsius);
+		System.out.println("화씨: " + Fahreheit);
+	}
 	static int sum() { // <2번문제> 1부터 100까지의 합계
 		
 		int total=0;
@@ -156,11 +174,6 @@ public class Date_06_07 {
 
 		System.out.print(res);
 	}
-
-	static void arithmetic_operation() {
-
-	}
-
 }
 class Cipherpassword { // <9번문제> 시저의 암호
 
@@ -216,5 +229,33 @@ class Cipherpassword { // <9번문제> 시저의 암호
 		}
 		System.out.printf("암호화된 비밀번호: %s \n", password);
 		System.out.printf("복호화된 비밀번호: %s \n",res);
+	}
+}
+
+class ArithmeticOperation { //<10번문제> 사칙연산
+
+	void add(int n1, int n2){
+
+		int res = n1+n2;
+		System.out.println("덧셈의 결과값: " + res);
+	}
+
+	void subtract(int n1, int n2){
+		int res = n1-n2;
+		System.out.println("뺄셈의 결과값: " + res);
+	}
+
+	void divide(int n1, int n2){
+		try{
+			double res = n1/ n2;
+			System.out.println("나눗셈의 결과값: " + res);
+		}catch(ArithmeticException exception){
+			System.out.println("n2의 값이 0이네요!");
+		}
+	}
+	
+	void multiply(int n1, int n2){
+		int res = n1 * n2;
+		System.out.println("곱셈의 결과값: "+ res);
 	}
 }
