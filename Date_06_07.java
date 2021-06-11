@@ -6,12 +6,13 @@ public class Date_06_07 {
 
 	public static void main(String[] args) {
 		
-		// sum();
-		// gugudan();
-		// star();
-		//cal_grade();
-		sum_avg();
-		System.out.println("ddd");
+		// sum();     // 2번
+		// gugudan(); // 3번
+		// star();    // 4번
+		//cal_grade(); // 5번
+		//sum_avg();    // 6번
+		
+		//change_case();  // 8번
 	}
 	
 	static int sum() { //1부터 100까지의 합계
@@ -83,7 +84,7 @@ public class Date_06_07 {
 		else
 			grade='F';
 		
-		System.out.print("����: " + grade);
+		System.out.print("학점은 : " + grade);
 		
 	}
 	
@@ -99,22 +100,35 @@ public class Date_06_07 {
 			System.out.println(str);
 		}
 
-	
-		
-		
-//		int score=0;
-//		double avg;
-//
-//		for(int i =0; i<arr.length;i++)
-//		{
-//		  score += arr[i];
-//		}
-//		
-//		avg = score / arr.length;
-//		
-//		System.out.printf("�հ�: %d \n", score);
-//		System.out.printf("���: %f", avg);
-//		
 	}
-	
+	static void change_case() {
+
+		String word = "Hello, World";
+		int word_len = word.length();
+		char res_word []  = new char [word_len];
+
+		for(int i =0; i<word_len;i++){
+			
+			int tmp_word = word.charAt(i);           // 아스키 코드 이용하여 대문자를 소문자로
+			if(tmp_word>=65 && tmp_word<=90){
+				char tmp = (char) (tmp_word + 32);
+				res_word[i] = tmp;
+			}
+			else if(tmp_word >=97 && tmp_word <=122){ // 아스키 코드 이용하여 소문자를 대문자로
+				char tmp = (char) (tmp_word - 32);
+				res_word[i] = tmp;
+			}
+			else{                                    // 대소문자가 아닌 글자는 그대로 출력
+				char tmp = (char) tmp_word;
+				res_word[i] = tmp;
+			}
+		}
+		
+		String res = "";
+		for(int i =0; i<res_word.length; i++){
+			res+=res_word[i];
+		}
+
+		System.out.println(res);
+	}
 }
