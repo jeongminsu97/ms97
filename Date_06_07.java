@@ -12,7 +12,7 @@ public class Date_06_07 {
 		// gugudan(); // 3번
 		// star();    // 4번
 		//cal_grade(); // 5번
-		//sum_avg();    // 6번
+		sum_avg();    // 6번
 		//subject_sum_avg(); // 7번
 		//change_case();  // 8번
 		/* // 9번
@@ -118,10 +118,18 @@ public class Date_06_07 {
 		String input = scanner.nextLine();
 		
 		String [] arr_score = input.split(",");
-		
+		int sum =0;
+
 		for(String str : arr_score){
-			System.out.println(str);
+			str.replaceAll("[^\\d]", "");
+			//System.out.print(str+ " ");
+
+			sum += Integer.parseInt(str);
 		}
+		double avg = sum / arr_score.length;
+
+		System.out.println("합계: " + sum);
+		System.out.println("평균: " + avg);
 	}
 
 	static void subject_sum_avg() { // <7번문제> 과목별 합계, 평균계산
