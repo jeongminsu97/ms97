@@ -11,9 +11,10 @@ public class Date_06_07 {
 		// star();
 		//cal_grade();
 		sum_avg();
+		System.out.println("ddd");
 	}
 	
-	static int sum() { // 1ºÎÅÍ 100±îÁö ´õÇÏ±â, ¹®Á¦ 2
+	static int sum() { // 1ï¿½ï¿½ï¿½ï¿½ 100ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½, ï¿½ï¿½ï¿½ï¿½ 2
 		
 		int total=0;
 		for (int i =1; i<100; i++)
@@ -24,7 +25,7 @@ public class Date_06_07 {
 		return total;
 	}
 	
-	static void gugudan() { // ±¸±¸´Ü 2´ÜºÎÅÍ Ãâ·ÂÇÏ±â, ¹®Á¦ 3
+	static void gugudan() { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2ï¿½Üºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½, ï¿½ï¿½ï¿½ï¿½ 3
 		
 		for(int i =1; i<10;i++)
 		{	
@@ -32,7 +33,7 @@ public class Date_06_07 {
 			{
 				continue;
 			}
-			System.out.println("** " + i + "´Ü"+ " **");
+			System.out.println("** " + i + "ï¿½ï¿½"+ " **");
 			for(int j =1; j<10;j++)
 			{
 				System.out.println(i + " * " + j +" = " + i*j );
@@ -43,10 +44,10 @@ public class Date_06_07 {
 		}
 	}
 	
-	static void star() { // ¶óÀÎ¹Þ¾Æ¼­ º°Âï±â , ¹®Á¦ 4
+	static void star() { // ï¿½ï¿½ï¿½Î¹Þ¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ , ï¿½ï¿½ï¿½ï¿½ 4
 		                
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("º°Æ÷¸¦ ÇÁ¸°Æ®ÇÒ ÁÙÀÇ Å©±â¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å©ï¿½â¸¦ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½: ");
 		int line = scanner.nextInt();
 		
 		for(int i=0; i<line;i++)
@@ -65,10 +66,10 @@ public class Date_06_07 {
 		}
 	}
 	
-	static void cal_grade() { // Á¡¼ö ÀÔ·Â¹Þ°í ÇÐÁ¡ °è»ê, ¹®Á¦ 5
+	static void cal_grade() { // ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹Þ°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ 5
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Á¡¼ö ÀÔ·Â: ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½: ");
 		int score = scanner.nextInt();
 		char grade;
 		
@@ -83,14 +84,14 @@ public class Date_06_07 {
 		else
 			grade='F';
 		
-		System.out.print("ÇÐÁ¡: " + grade);
+		System.out.print("ï¿½ï¿½ï¿½ï¿½: " + grade);
 		
 	}
 	
-	static void sum_avg() { // ÇÑÇÐ±Þ 10¸í ÇÐ»ýÀÇ Á¡¼ö Çé°è, Æò±Õ
+	static void sum_avg() { // ï¿½ï¿½ï¿½Ð±ï¿½ 10ï¿½ï¿½ ï¿½Ð»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½
 	
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Á¡¼ö ÀÔ·Â: ");
+		System.out.print("ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½: ");
 		String input = scanner.nextLine();
 		
 		String [] arr_score = input.split(",");
@@ -98,6 +99,8 @@ public class Date_06_07 {
 		for(String str : arr_score){
 			System.out.println(str);
 		}
+
+	
 		
 		
 //		int score=0;
@@ -110,8 +113,8 @@ public class Date_06_07 {
 //		
 //		avg = score / arr.length;
 //		
-//		System.out.printf("ÇÕ°è: %d \n", score);
-//		System.out.printf("Æò±Õ: %f", avg);
+//		System.out.printf("ï¿½Õ°ï¿½: %d \n", score);
+//		System.out.printf("ï¿½ï¿½ï¿½: %f", avg);
 //		
 	}
 	
