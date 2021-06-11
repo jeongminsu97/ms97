@@ -11,11 +11,16 @@ public class Date_06_07 {
 		// star();    // 4번
 		//cal_grade(); // 5번
 		//sum_avg();    // 6번
-		subject_sum_avg();
+		//subject_sum_avg(); // 7번
 		//change_case();  // 8번
+		/* // 9번
+		Cipherpassword test = new Cipherpassword(); // 객체생성
+		test.encrypt("Hello world"); // 암호화
+		test.decrypt("Khoor Zruog"); // 복호화
+		*/
 	}
 	
-	static int sum() { //1부터 100까지의 합계
+	static int sum() { // <2번문제> 1부터 100까지의 합계
 		
 		int total=0;
 		for (int i =1; i<100; i++)
@@ -26,7 +31,7 @@ public class Date_06_07 {
 		return total;
 	}
 	
-	static void gugudan() { // 구구단
+	static void gugudan() { // <3번문제> 구구단 
 		for(int i =1; i<10;i++)
 		{	
 			if (i ==1)
@@ -44,7 +49,7 @@ public class Date_06_07 {
 		}
 	}
 	
-	static void star() { // 별찍기
+	static void star() { // <4번문제> 별찍기
 		                
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("원하는 라인의 수를 입력: ");
@@ -66,7 +71,7 @@ public class Date_06_07 {
 		}
 	}
 	
-	static void cal_grade() { // 학점 계산기?
+	static void cal_grade() { // <5번문제> 학점 계산기?
 		
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("점수를 입력: ");
@@ -88,7 +93,7 @@ public class Date_06_07 {
 		
 	}
 	
-	static void sum_avg() { // 평균, 합계 구하기
+	static void sum_avg() { // <6번문제> 평균, 합계 구하기
 	
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("점수: ");
@@ -101,7 +106,7 @@ public class Date_06_07 {
 		}
 	}
 
-	static void subject_sum_avg() {
+	static void subject_sum_avg() { // <7번문제> 과목별 합계, 평균계산
 		int student [][] = new int [][]{ // 점수데이터 선언
 			{90, 80, 80},
 			{85, 85, 95},
@@ -121,7 +126,7 @@ public class Date_06_07 {
 		}
 
 	}
-	static void change_case() {
+	static void change_case() { // <8번문제> 대문자를 소문자로, 소문자를 대문자로
 
 		String word = "Hello, World";
 		int word_len = word.length();
@@ -149,6 +154,67 @@ public class Date_06_07 {
 			res+=res_word[i];
 		}
 
-		System.out.println(res);
+		System.out.print(res);
+	}
+
+	static void arithmetic_operation() {
+
+	}
+
+}
+class Cipherpassword { // <9번문제> 시저의 암호
+
+	void encrypt(String password) {
+		int word_len = password.length();
+		char res_word []  = new char [word_len];
+		for(int i =0; i<word_len;i++){
+			
+			int tmp_word = password.charAt(i);           // 아스키 코드 이용하여 대문자를 소문자로
+			if(tmp_word>=65 && tmp_word<=90){
+				char tmp = (char) (tmp_word +3); // +3은 시저의 암호 조건
+				res_word[i] = tmp;
+			}
+			else if(tmp_word >=97 && tmp_word <=122){ // 아스키 코드 이용하여 소문자를 대문자로
+				char tmp = (char) (tmp_word +3); // +3은 시저의 암호 조건
+				res_word[i] = tmp;
+			}
+			else{                                    // 대소문자가 아닌 글자는 그대로 출력
+				char tmp = (char) tmp_word;
+				res_word[i] = tmp;
+			}
+		}
+		String res = "";
+		for(int i =0; i<res_word.length; i++){
+			res+=res_word[i];
+		}
+		System.out.printf("원문: %s \n", password);
+		System.out.printf("암호화: %s \n",res);
+	}
+
+	void decrypt(String password) {
+		int word_len = password.length();
+		char res_word []  = new char [word_len];
+		for(int i =0; i<word_len;i++){
+			
+			int tmp_word = password.charAt(i);           // 아스키 코드 이용하여 대문자를 소문자로
+			if(tmp_word>=65 && tmp_word<=90){
+				char tmp = (char) (tmp_word -3); // -3은 시저의 암호 복호화
+				res_word[i] = tmp;
+			}
+			else if(tmp_word >=97 && tmp_word <=122){ // 아스키 코드 이용하여 소문자를 대문자로
+				char tmp = (char) (tmp_word -3); // -3은 시저의 암호 복호화
+				res_word[i] = tmp;
+			}
+			else{                                    // 대소문자가 아닌 글자는 그대로 출력
+				char tmp = (char) tmp_word;
+				res_word[i] = tmp;
+			}
+		}
+		String res = "";
+		for(int i =0; i<res_word.length; i++){
+			res+=res_word[i];
+		}
+		System.out.printf("암호화된 비밀번호: %s \n", password);
+		System.out.printf("복호화된 비밀번호: %s \n",res);
 	}
 }
